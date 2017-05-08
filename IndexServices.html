@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="IndexServices/css/IndexServices.css">
+    </head>
+    <body class="" ontouchstart>
+        <div class="bc-bg" tabindex="0" data-control="PAGE" id="Page">
+            <div class="uh ub ub-pc ub-ac ub-f1 bc-head" data-control="HEADERBOX" id="HeaderBox">
+                <div class="ub ub-ac ub-pc" data-control="ICON" id="Icon">
+                    <div class="fa fa-angle-left" data-control-icon=""></div>
+                </div>
+                <div class="uinput ub bc-border uba ub-f1" data-control="SEARCH" id="Search">
+                    <div class="uinn fa fa-search sc-text"></div>
+                    <input placeholder="搜索服务" type="search" class="ub-f1 ub ub-pc ub-ac" data-control-scope="Search">
+                </div>
+                <div class="" data-control="BOX" id="Box_0"></div>
+            </div>
+            <div class="" data-control="CONTENT" id="ScrollContent">
+              <div class="scrollbox">
+                <div class="box_bounce ub ub-ver ub-pc">
+                  <div class="ub-f1">
+                  </div>
+                  <div class="bounce_status">下拉更新......</div>
+                  <div class="bounce_status">松手更新......</div>
+                  <div class="bounce_status">更新中......</div>
+                </div>
+                <div class="" style="">
+                  <div id="tabview" class="ub ubb bc-border uinn">
+                  </div>
+                  <div id="ele_comment" data-bind="collection:$collection">
+                    <div mvvm-scope>
+                      <div class="ub uinn-ebt ubb bc-border">
+                        <div class="ub-img uwh-bdl mar-ar1" data-bind="css:{'background-image':format('url($1)',avator)}"></div>
+                        <div class="ub-f1 ufl">
+                          <div class="ulev-7 umar-t" data-bind="text:username"></div>
+                          <div class="t-9b ulev-7 umar-tb uh-ebt1 ulh-ebt ut-s-ebt" data-bind="text:comment"></div>
+                          <div class="ub ub-ac" data-bind="for:goodsImg">
+                            <div class="uwh-bdl ub-img umar-r-ebt" data-bind="css:{'background-image':format('url($1)',gsimg)}"></div>
+                          </div>
+                          <div class="t-9b ulev-6 umar-at1" data-bind="text:time"></div>
+                          <div class="t-82 c-d0">
+                            <div class="topdirection uabs-ebt1"></div>
+                            <div class="uinn ulev-7 umar-a umar-t-ebt2" data-bind="text:addTo"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/appcan.scrollbox.js"></script>
+        <script src="js/template.import.js"></script>
+		<script src="js/appcan.listview.js"></script>
+		<script src="js/appcan.optionList.js"></script>
+		<script src="js/appcan.slider.js"></script>
+		<script src="js/appcan.tab.js"></script>
+		<script src="js/appcan.treeview.js"></script>
+        <script src="IndexServices/js/IndexServices.js"></script>
+    </body>
+</html>

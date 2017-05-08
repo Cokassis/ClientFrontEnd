@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="IndexMain/css/IndexMain.css" />
+        <link rel="stylesheet" href="css/common.css"/>
+        <style type="text/css">
+        	.c-red-pop {
+        		background-color: #D13434;
+        	}
+        </style>
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="ub ub-ver ub-fv">
+            <!--top-->
+            <div class="ub ub-ver">
+                <div id="header" class="ub ub-ver">
+                    <div class="uinn bc-text-head bc-head">
+                        <div class="ub ub-ac uc-a1 uinput c-wh-ele uinn-ele2">
+                            <div class="uwh-ele1 ub-img ele-search" id="sch-Dishes"></div>
+                            <div class="ub-f1 uinn1">
+                                <input placeholder="搜索菜品、食材" type="text" class="ulev-ele" id="FoodsSearcher">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ub-f1 ub ub-ver">
+                    <div id="slider" class="slider ub-f1">
+                    </div>
+                </div>
+            </div>
+            <!--content-->
+            <div class="ub ub-ver ub-f1">
+                <div class="ub ub-ver">
+                    <div class="ub umar-t-ele">
+                        <div class="ub-f1 ub ub-ac ub-ver" id="Menu">
+                            <div class="uwh-ele2 uc-a-ele1 c-wh ub ub-ac ub-pc">
+                                <div class="btn_wh1 ub-img eleIcon3"></div>
+                            </div>
+                            <div class="umar-at1 t-gra7 tx-c ulev-2">
+                                我的菜谱
+                            </div>
+                        </div>
+                        <div class="ub-f1 ub ub-ac ub-ver" id="OnSale">
+                            <div class="uwh-ele2 uc-a-ele1 c-wh ub ub-ac ub-pc">
+                                <div class="btn_wh1 ub-img eleIcon2"></div>
+                            </div>
+                            <div class="umar-at1 t-gra7 tx-c ulev-2">
+                                天天特价
+                            </div>
+                        </div>
+                        <div class="ub-f1 ub ub-ac ub-ver" id="Market">
+                            <div class="uwh-ele2 uc-a-ele1 c-wh ub ub-ac ub-pc">
+                                <div class="btn_wh1 ub-img eleIcon4"></div>
+                            </div>
+                            <div class="umar-at1 t-gra7 tx-c ulev-2">
+                                生鲜市场
+                            </div>
+                        </div>
+                        <div class="ub-f1 ub ub-ver ub-ac" id="Orders">
+                            <div class="uwh-ele2 uc-a-ele1 c-wh ub ub-ac ub-pc">
+                                <div class="btn_wh1 ub-img eleIcon1"></div>
+                            </div>
+                            <div class="umar-at1 t-gra7 tx-c ulev-2">
+                                我的订单<span class="sc-text-warn">(3)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ub umar-t-ele ub-ver ub-pc">
+                        <div class="ub ub-pj">
+                            <div class="ub ub-ac">
+                                <div class="fa fa-thumbs-up umar-l"></div>
+                                <div class="umar-a">推荐预订</div>
+                            </div>
+                            <div class="ub ub-ac ub-pc" id="editComds">
+                                <div class="fa fa-edit umar-l"></div>
+                                <div class="umar-a">编辑</div>
+                            </div>
+                        </div>
+                        <div class="scrollbox">
+                            <div id="listview"  class="ubt bc-border sc-bg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uf ub ub-ac sc-bg-active uhide">
+                <div class="ub-f1 ub ub-ac umar-t">
+                    <div class="checkbox umar-l"><input type="checkbox" class="uabs ub-con" ></div>
+                    <div>全选</div>
+                </div>
+                <div class="ub ub-ac">
+                    <div class="button uinn1 umar-l ub ub-ac bc-text-head ub-pc bc-btn"  id="settle_btn">
+                        加入购物车(4)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/appcan.scrollbox.js"></script>
+        <script src="js/appcan.tab.js"></script>
+        <script src="js/appcan.listview.js"></script>
+		<script src="js/appcan.slider.js"></script>
+        <script src="IndexMain/js/GetData.js"></script>
+        <script src="IndexMain/js/Controller.js"></script>
+        <script src="IndexMain/js/IndexMain.js"></script>
+</body>
+</html>
