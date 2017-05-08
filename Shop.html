@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="Shop/css/Shop.css">
+    </head>
+    <body class="um-vp bc-bg" ontouchstart>
+        <div class="ub ub-ver t-bla"  tabindex="0" data-control="PAGE" id="Page">
+            <div id="header" class="uh bc-text-head ub bc-head" data-control="HEADER" id="Header">
+                <div class="nav-btn nav-bt" id="nav-left">
+                    <div class="fa fa-angle-left fa-2x"></div>
+                </div>
+                <h1 id="shopname" class="ut ub-f1 ulev-3 ut-s tx-c" tabindex="0">品泰贸易有限公司</h1>
+                <div class="nav-btn ">
+                <div class=" nav-bt" id="nav-right">
+                    <div class="ub-img icon-call umw2 umh4"></div>
+                </div>
+                <div class=" nav-bt" id="nav-right1">
+                    <div class="ub-img icon-home umw2 umh4"></div>
+                </div>
+                </div>
+            </div>
+            <div class="ub-f1 ub ub-ver" data-control="CONTENT" id="ScrollContent">
+                <div class="ub ub-ver c-wh">
+                    <div class="ub-img7 ub-fh uh-per1 banImg"></div>
+                    <div class="ub uinn-a7 ubb b-gra-cf umar-per2">
+                        <div class="uba bc-border uwh-esh2 c-wh ub ub-ac ub-pc">
+                            <div class="ub-img uwh-per2 userImg"></div>
+                        </div>
+                        <div class="ub ub-ver ub-f1">
+                            <div id="shopname" class="ulev-app2 uinn-esh bc-text-head">
+                                品泰贸易有限公司
+                            </div>
+                            <div class="ub">
+                                <div class="ub ub-ver ub-ac ub-f1">
+                                    <div class="t-gra-50 ulev-app2 ufm1">
+                                        58
+                                    </div>
+                                    <div id="shopbaobei" class="ulev-4 t-gar-a0 uinn-esh2">
+                                        全部食材
+                                    </div>
+                                </div>
+                                <div class="ub ub-ver ub-ac ub-f1">
+                                    <div class="t-gra-50 ulev-app2 ufm1">
+                                        10
+                                    </div>
+                                    <div id="newshopbaobei" class="ulev-4 t-gar-a0 uinn-esh2">
+                                        鸡鸭鱼肉
+                                    </div>
+                                </div>
+                                <div class="ub ub-ver ub-ac ub-f1">
+                                    <div class="t-gra-50 ulev-app2 ufm1">
+                                        15
+                                    </div>
+                                    <div class="ulev-4 t-gar-a0 uinn-esh2">
+                                        蔬菜瓜果
+                                    </div>
+                                </div>
+                                <div class="ub ub-ver ub-ac ub-f1">
+                                    <div class="t-gra-50 ulev-app2 ufm1">
+                                        25
+                                    </div>
+                                    <div class="ulev-4 t-gar-a0 uinn-esh2">
+                                        其他
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-wh umar-at2">
+                    <div class="ub uinn-esh3">
+                        <div class="ub-f1 ulev-1 t-bla">
+                            热销食材
+                        </div>
+                        <div id="m_filter" class="uba uc-a1 uinn1 ulev-1">
+                            刷选
+                        </div>
+                    </div>
+                    <div class="ub ub-ver">              
+                        <div class="ub ub-ver mar-aL1" id="listview"></div>
+                    </div>
+                    <div class="umar-a ulev3 uinn1">点击加载更多……</div>
+                </div>
+            </div>
+            <div class="utra" data-control="MASK" id="Mask"></div>
+            <div class="uf sc-bg ubt sc-border-tab ub ub-ver ub-fh uhide" id="Footer_mask">  
+                <div class="ub ub-ver">
+                    <div class="select uba bc-border bc-text">
+                        <div class="text">请选择</div>
+                        <div class="icon"></div>
+                        <select selectedindex="0">
+                            <option value=0>全部分类</option>
+                            <option value=1>鸡鸭鱼肉</option>
+                            <option value=2>蔬菜瓜果</option>
+                            <option value=3>其他</option>
+                        </select>
+                    </div>
+                    <div id="filter_lv" class="ub-f1">
+        
+                    </div>
+                    <div class="umar-a">
+                        <div class="ub uba ub-ac ub-pc tx-c button uc-a1 c-red-pop bc-text-head">确定</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/appcan.listview.js"></script>
+        <script src="Shop/js/Shop.js"></script>
+    </body>
+    <script>
+        var i = 0;
+        appcan.ready(function() {
+            appcan.initBounce();
+            var lv = appcan.listview({
+                selector : "#listview",
+                type : "thickLine",
+                hasIcon : true,
+                hasAngle : true,
+                hasSubTitle : true,
+                multiLine : 1,
+            });
+            lv.set(get_list_view());
+            lv.on("click",function(ele,obj,curEle){
+                alert(2);
+            })
+            set_buy_function();
+            
+            
+            var filterData = [{
+                title : "猪肉类",
+                icon : "./css/myImg/shehui.png"
+            }, {
+                title : "牛肉类",
+                icon : "./css/myImg/lishi.png"
+            }, {
+                title : "禽蛋类",
+                icon : "./css/myImg/junshi.png"
+            }, {
+                title : "水产类",
+                icon : "./css/myImg/guonei.png"
+            }, {
+                title : "冰鲜类",
+                icon : "./css/myImg/guoji.png"
+            }, {
+                title : "其他肉类",
+                icon : "./css/myImg/tansuo.png"
+            }];
+            var lv1 = appcan.listview({
+                selector : "#filter_lv",
+                type : "thinLine",
+                hasIcon : false,
+                hasAngle:false,
+                hasCheckbox : true,
+                hasSmallIcon: false,
+                align : 'right'
+            });
+            lv1.set(filterData);
+            appcan.button("#ok", "btn-act", function () {
+                appcan.window.close(-1);
+            })
+            appcan.select(".select",function(ele,value){
+                console.log(value);
+            });
+        })
+
+        appcan.button(".nav-btn", "btn-act", function() {
+            appcan.window.open(user_content,user_content.html);
+        })
+        appcan.button("#m_filter", "btn-act", function () {
+            var f_width = $("#listview").width();
+            var f_left = 0;
+            var f_top = 0;
+            appcan.frame.open({
+                id:'material_filter',
+                url:'shop_content/html/material_filter_content.html',
+                left: f_left,
+                top: f_top,
+                name:'material_filter',
+                index:'',
+                change:''
+            });
+            appcan.window.resizePopover({
+                name:'material_filter',
+                left: f_left,
+                top: f_top,
+                width: f_width,
+                height: ''
+            });
+        })
+    </script>
+</html>

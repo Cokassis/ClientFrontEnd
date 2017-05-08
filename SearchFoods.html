@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="SearchFoods/css/SearchFoods.css">
+    </head>
+    <body class="" ontouchstart>
+        <div class="bc-bg" tabindex="0" data-control="PAGE" id="Page">
+            <div class="uh ub ub-pc ub-ac ub-f1 bc-head" data-control="HEADERBOX" id="HeaderBox">
+                <div class="ub ub-ac ub-pc" data-control="ICON" id="Icon">
+                    <div class="fa fa-angle-left" data-control-icon=""></div>
+                </div>
+                <div class="uinput ub bc-border uba ub-f1 umar-r " data-control="SEARCH" id="Search">
+                    <div class="uinn fa fa-search sc-text"></div>
+                    <input placeholder="请输入关键字" type="search" class="ub-f1 ub ub-pc ub-ac" data-control-scope="Search">
+                </div>
+                <div class="btn umar-a uc-a">搜索</div>
+                <div class="umar-a uhide">
+                    <span>刷选</span>
+                    <div class="fa fa-angle-down"></div>
+                </div>
+            </div>
+            <div class="" data-control="CONTENT" id="ScrollContent">
+                <div class="">
+                    <div class="box_bounce ub ub-ver ub-pc">
+                        <div class="ub-f1"></div>
+                        <div class="bounce_status">
+                            下拉更新......
+                        </div>
+                        <div class="bounce_status">
+                            松手更新......
+                        </div>
+                        <div class="bounce_status">
+                            更新中......
+                        </div>
+                    </div>                     
+                    <div class="umar-a">    
+                        <div id="div-filter">
+                            
+                        </div>                    
+                        <div class="uinn">
+                            <div class="ulev-app1 pp2">
+                                热门搜索
+                            </div>
+                            <div class="uinn bc-border ulev-1">
+                                <div class="tx-c ub umar-a">
+                                    <div class="uba bc-border ub-f1 uinn-d umar-2 ub-ac ub-pc ulev-1">
+                                        红烧牛肉
+                                    </div>
+                                    <div class="uba bc-border ub-f1 uinn-d umar-2 ub ub-ac ub-pc ulev-1">
+                                        金针菇肥牛
+                                    </div>
+                                    <div class="uba bc-border ub-f1 uinn-d umar-2 ub ub-ac ub-pc ulev-1">
+                                        回锅肉
+                                    </div>
+                                    <div class="uba bc-border ub-f1 uinn-d umar-2 ub ub-ac ub-pc ulev-1">
+                                        番茄鸡蛋盖浇饭
+                                    </div>
+                                    <div class="uba bc-border ub-f1 uinn-d umar-2 ub ub-ac ub-pc ulev-1">
+                                        酸辣土豆丝
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uinn ub ub-ver">
+                            <div id="rec-dish" class="">
+                                <div class="ub">
+                                    <div class="ulev-app2 ulev-app1">智能推荐</div>
+                                </div>
+                                <div class="scrollbox">
+                                    <div id="listview"></div>
+                                </div>
+                            </div>
+                            <div id="sch-result" class="uhide">
+                                <div class="ub">
+                                    <div class="ulev-app2 ulev-app1">搜索结果</div>
+                                </div>
+                                <div class="scrollbox">
+                                    <div id="lv-result"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/appcan.js"></script>
+        <script src="js/appcan.control.js"></script>
+        <script src="js/appcan.scrollbox.js"></script>
+        <script src="js/template.import.js"></script>
+		<script src="js/appcan.listview.js"></script>
+		<script src="js/appcan.optionList.js"></script>
+		<script src="js/appcan.slider.js"></script>
+		<script src="js/appcan.tab.js"></script>
+		<script src="js/appcan.treeview.js"></script>
+        <script src="SearchFoods/js/SearchFoods.js"></script>    
+        <script>
+            appcan.select("#st-dish",function(ele,value){
+                console.log(value);
+            });
+            appcan.select("#st-mrial",function(ele,value){
+                console.log(value);
+            });
+        </script>
+    </body>
+</html>

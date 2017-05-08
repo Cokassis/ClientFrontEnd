@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="css/ui-box.css">
+        <link rel="stylesheet" href="css/ui-base.css">
+        <link rel="stylesheet" href="css/ui-color.css">
+        <link rel="stylesheet" href="css/appcan.icon.css">
+        <link rel="stylesheet" href="css/appcan.control.css">
+        <link rel="stylesheet" href="Personal/css/main.css">
+        <link rel="stylesheet" href="Personal/css/Personal.css">
+    </head>
+    <body class="um-vp bc-bg " ontouchstart>
+        <div class="c-gra1 uinn-a1 ub bc-head yy_ulev-2 yy_h">
+            <div class="ub-f1 ub ub-ver ub-ac ub-pc" id="login">
+                <div class="yy_uwh-set3 pos_re ub">
+                    <div class="yy_uwh-set3 uc-a-set3 ub-img setImg1" id='touxiang'></div>
+
+                </div>
+                <div class="umar-at1" id="userName">
+                    点击头像登录
+                </div>
+                <div class="t-gra-set3 ulev-4 umar-t">
+                    <div class="umar-at1 t-gra-set4 " id="userPhoto">
+                        13433008888
+                    </div>
+                    <div class="umar-at1 t-gra-set4" id="userAdd">
+                        龙光8E104
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--下面功能-->
+        <div class="ub ub-ver ub-f1  yy_ulev-1">
+            <div id="listview"  class="ubt bc-border yy_sc-bg"></div>
+            <div id="listview1"  class="ubt bc-border yy_sc-bg yy_umar-t"></div>
+        </div>
+    </body>
+    <script src="js/appcan.js"></script>
+    <script src="js/appcan.control.js"></script>
+    <script src="js/appcan.listview.js"></script>
+    <script src="Personal/js/Personal.js"></script>
+    </body>
+    <script>
+        var islog = '';
+        var name
+        var uID
+        var photo
+        var mbaasURL
+        appcan.ready(function() {
+  
+           if(appcan.locStorage.val('yemian')=='meishi'){
+            name=appcan.locStorage.val('userName');
+            alert('从美食过来的登录'+name);
+            uID=appcan.locStorage.val('userId');
+            photo=appcan.locStorage.val('photo'); 
+                 if (!isDefine(photo)) {
+                    photo = '5590ee892636b6e31f560d1f';//如果获取的头像ID为空，就赋值一个默认头像   
+                } else {
+                    photo = photo;
+                }
+                 $('#userName').text(name);
+                $("#touxiang").css("background-image", "url('" + login_data + "') !important");
+           }
+            mbaasURL = 'http://cloudservices.appcan.cn/11430401/public/1/files/'; //取图片文件地址
+                        //取登录状态
+            appcan.window.subscribe('islog', function(msg) {
+                appcan.locStorage.setVal('islog', msg);
+            })
+            //取用户信息
+            appcan.window.subscribe('login', function(msg) {
+                uID = JSON.parse(msg)[0].id;
+                name = JSON.parse(msg)[0].userName;
+                photo = JSON.parse(msg)[0].photo;
+                if (!isDefine(photo)) {
+                    photo = '5590ee892636b6e31f560d1f';//如果数据库中头像ID为空，就赋一个默认头像
+                } else {
+                    photo = photo;
+                    //从数据库中读取过来的头像
+                }
+                var login_data = mbaasURL + photo;
+                $('#userName').text(name);
+                $("#touxiang").css("background-image", "url('" + login_data + "') !important");
+                
+            });
+
+            //修改信息成功后，个人中心更改头像
+            appcan.window.subscribe('serverImgID', function(imgID) {
+                var update_data = mbaasURL + imgID;
+                $("#touxiang").css("background-image", "url('" + update_data + "') !important");
+            })
+        })
+
+        appcan.button("#login", "ani-act", function() {
+            appcan.window.open({
+                name : 'login',
+                data : 'login.html',
+                aniId : '10'
+            });
+            appcan.locStorage.setVal('yemian', 'personal');
+        });
+
+        var lv = appcan.listview({
+            selector : "#listview",
+            type : "thinLine",
+            hasIcon : true,
+            hasAngle : true,
+            hasSubTitle : false,
+            multiLine : 1,
+        });
+        lv.set([{
+            title : "编辑信息",
+            icon : "Personal/css/myImg/set_img5.png",
+            subTitle : "12:05",
+            id : "2"
+        }, {
+            title : "我的收藏",
+            icon : "Personal/css/myImg/set_img6.png",
+            subTitle : "12:05",
+            id : "2"
+        }])
+        lv.on("click", function(ele, obj, curEle) {
+            islog = appcan.locStorage.val('islog');
+            if (islog == '1') {
+                if (obj.title == '编辑信息') {
+                    appcan.window.open({
+                        name : 'updateMsg',
+                        data : 'updateMsg.html',
+                        aniId : '10'
+                    })
+                    appcan.locStorage.setVal('name', name);
+                    appcan.locStorage.setVal('userID', uID);
+                    appcan.locStorage.setVal('photo', photo);
+
+                } else if (obj.title == '我的收藏') {
+                    appcan.window.open({
+                        name : 'myCollected',
+                        data : 'myCollected.html',
+                        aniId : '10'
+                    })
+                    appcan.locStorage.setVal('userID', uID);
+                }
+            } else {
+                appcan.window.openToast('您未登录', '2000', '5', 0);
+            }
+        })
+        var lv1 = appcan.listview({
+            selector : "#listview1",
+            type : "thinLine",
+            hasIcon : true,
+            hasAngle : true,
+            hasSubTitle : false,
+            multiLine : 1,
+        });
+        lv1.set([{
+            title : "返回主页",
+            icon : "Personal/css/myImg/set_img4.png",
+            subTitle : "12:05",
+            id : "1"
+        }, {
+            title : "退出登录",
+            icon : "Personal/css/myImg/set_img7.png",
+            subTitle : "12:05",
+            id : "2"
+        }])
+        lv1.on("click", function(ele, obj, curEle) {
+            islog = appcan.locStorage.val('islog');
+            if (obj.title == '退出登录') {
+                if (islog == '1') {
+                    appcan.locStorage.remove();
+                    //清除缓存
+                     $('#userName').text('点击头像登录');
+                      photo = '5590ee892636b6e31f560d1f';
+                      login_data = mbaasURL + photo;
+                $("#touxiang").css("background-image", "url('" + login_data + "') !important");
+                
+                } else {
+                    appcan.window.openToast('您还未登录！', '2000', '5', '0');
+                }
+            } else if (obj.title == '返回主页') {
+                  appcan.window.open({
+                    name:'index',
+                    data:'index.html'
+                })
+            }
+        })
+    </script>
+</html>
