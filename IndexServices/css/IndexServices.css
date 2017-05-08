@@ -1,0 +1,111 @@
+#HeaderBox {
+	height:2.63em;
+	border-top-width:00px;
+	border-right-width:00px;
+	border-bottom-width:1px;
+	border-left-width:00px;
+	border-style:solid;
+	border-color:rgba(241,241,241,1);
+	color:rgba(217,217,217,1);
+}
+#Icon {
+	width:3em;
+}
+#Search {
+	height:2.00em;
+	border-radius:3px;
+	background-color:rgba(255,255,255,1);
+	color:rgba(255,0,0,1);
+	font-size:1em;
+}
+#Box_0 {
+	width:.75em;
+}
+#ScrollContent {
+	padding:2.69em 0em 0em 0em;
+}
+.uinn-at4{
+    padding: 2.69em 0.5em 0em !important;
+}
+.uinn-4a {
+    padding-top: 2.69em !important;
+}
+.uinn-a4{
+    padding:2.69em .5em 0 !important;
+}
+.c-gra-e6{
+	background-color:#e6e6e6;
+}
+.c-gra-c2{
+	background-color:#c2c2c2;
+}
+.t-org-f1{
+	color:#f1792a;
+}
+.uwh-bdl{
+	width:2.5em;
+	height:2.5em;
+}
+.uinn-ebt{
+	padding:0.4375em 1.25em;
+}
+.umar-r-ebt{
+	margin-right:0.3125em;
+}
+.uh-ebt1{
+	height:2.5em;
+}
+.ulh-ebt{
+	line-height:1.25em;
+}
+.ut-s-ebt{
+	overflow: hidden; 
+	text-overflow:ellipsis;
+}
+.umar5{
+	margin:0 .3125em 0 0;
+}
+
+.t-9b{
+	color:#9b9b9b;
+}
+.t-82{
+	color:#828282;
+}
+.topdirection
+{
+	width:0;height:0;
+	line-height:0;
+	border-width:.75em;
+	border-style:solid;
+	border-color: transparent transparent #d0d0d0 transparent;
+}
+.uabs-ebt1{
+	position:absolute; 
+	left:1em; 
+	top:-1.3em;
+}
+.umar-t-ebt2{
+	margin-top:1.2em
+}
+.c-d0{
+	background-color:#d0d0d0;
+}
+.ulev-7{
+	font-size:0.75em;
+}
+.ulev-6{
+	font-size:0.625em;
+}
+.umar-tb{
+	margin:.5em 0;
+}
+.b-ad{
+	border-color:#adadad;
+}
+.mar-ar1{
+    margin-right:0.625em;
+}
+.umar-at1{
+    margin-top:0.625em;
+}
